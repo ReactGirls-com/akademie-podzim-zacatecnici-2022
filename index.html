@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Can you guess the secret number?</h1>
+    <div>
+      <h2>HOW TO PLAY</h2>
+      <ul>
+        <li>Guess the secret number between 0 and 100.</li>
+        <li>If you guess incorrect number, you will get a hint.</li>
+        <li>If you guess correct number, you win!</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>SECRET NUMBER</h2>
+      <span>0</span>
+      <span><</span>
+      <img src="star.svg" />
+      <span><</span>
+      <span>100</span>
+    </div>
+
+    <div>
+      <label for="number-input">Number between 0 and 100:</label>
+      <input id="number-input" type="number" min="1" max="99" />
+      <button>GUESS</button>
+    </div>
+  </body>
+</html>
