@@ -39,13 +39,74 @@
 
 // --------------------------------------------------
 
-// // Aritmetický průměr dvou čísel
-// function aritmetickyPrumer(cislo1, cislo2) {
-// 	let vysledek = (cislo1 + cislo2) / 2;
+// // Aritmetický průměr tří čísel
+// function aritmetickyPrumer(cislo1, cislo2, cislo3) {
+// 	let vysledek = (cislo1 + cislo2 + cislo3) / 3;
 // 	return vysledek;
 // }
 
-// let prumer1 = aritmetickyPrumer(2, 4);
-// let prumer2 = aritmetickyPrumer(2, 3);
+// let prumer1 = aritmetickyPrumer(2, 4, 7);
+// let prumer2 = aritmetickyPrumer(2, 3, -305);
 // console.log(prumer1);
 // console.log(prumer2);
+
+// --------------------------------------------------
+
+// // Funkce pro výpočet délky přepony na základě délek obou odvěsen pravoúhlého trojúhelníku
+// function delkaPrepony(odvesnaA, odvesnaB) {
+// 	let vysledek = Math.sqrt(odvesnaA * odvesnaA + odvesnaB * odvesnaB);
+// 	return vysledek;
+// }
+
+// let prepona = delkaPrepony(3, 4);
+// console.log(prepona);
+
+// --------------------------------------------------
+
+// Funkce pro vygenerování náhodného celého čísla mezi hodnotami minimum (včetně) a maximum (včetně).
+function nahodneCislo(minimum, maximum) {
+	let vysledek = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+	return vysledek;
+}
+
+// Funkce pro hod hrací kostkou o libovolném počtu stěn. Pro obvyklou kostku by se použilo volání hodKostkou(6).
+function hodKostkou(pocetSten) {
+	let vysledek = nahodneCislo(1, pocetSten);
+	return vysledek;
+}
+
+// --------------------------------------------------
+
+// // Házení kostkou tak dlouho, než padne šestka
+// let kostka;
+// do {
+// 	kostka = hodKostkou(6);
+// 	console.log(`Na kostce padlo: ${kostka}.`);
+// } while (kostka !== 6);
+
+// --------------------------------------------------
+
+// Funkce pro načtení čísla od uživatele
+function nactiCislo() {
+	return Number(prompt("Zadej číslo:"));
+}
+
+// --------------------------------------------------
+
+// Program na hádání tajného čísla uživatelem
+
+let minimum = 1;
+let maximum = 10;
+let tajneCislo = nahodneCislo(minimum, maximum);
+console.log(`Myslím si číslo mezi ${minimum} a ${maximum}. Dokážeš je uhodnout?`);
+let hadaneCislo;
+do {
+	hadaneCislo = nactiCislo();
+	if (hadaneCislo < tajneCislo) {
+		console.log(`Kdepak, myslím si číslo větší než ${hadaneCislo}.`);
+	} else if (hadaneCislo > tajneCislo) {
+		console.log(`Kdepak, myslím si číslo menší než ${hadaneCislo}.`);
+	} else {
+		console.log(`Výborně, uhodl(a) jsi! Skutečně jsem si myslel číslo ${tajneCislo}.`);
+	}
+} while (hadaneCislo !== tajneCislo);
