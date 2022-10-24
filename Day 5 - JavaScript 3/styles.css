@@ -121,3 +121,8 @@ button {
   font-size: 32px;
   letter-spacing: 0.05em;
 }
+
+#play-again-button {
+  background-color: hotpink;
+  display: none;
+}

@@ -9,15 +9,19 @@ function nahodneCislo(minimum, maximum) {
 window.addEventListener('load', function () {
 
   let randomNumber = nahodneCislo(0, 100)
-  console.log('nahodne cislo', randomNumber)
+  console.log(randomNumber)
 
   let submitButton = document.querySelector('#submit-button')
   let numberInput = document.querySelector('#number-input')
   let message = document.querySelector('#message')
+  let playAgainButton = document.querySelector('#play-again-button')
+
+  playAgainButton.addEventListener('click', function () {
+    document.location.reload()
+  })
 
   submitButton.addEventListener('click', function () {
     let guessedNumber = Number(numberInput.value)
-
 
     if (guessedNumber < randomNumber) {
       message.innerHTML = 'Myslím si větší číslo.'
@@ -25,6 +29,8 @@ window.addEventListener('load', function () {
       message.innerHTML = 'Myslím si menší číslo.'
     } else if (guessedNumber === randomNumber) {
       message.innerHTML = 'Gratulujem!'
+      playAgainButton.style.display = 'inline'
+      submitButton.style.display = 'none'
     } else {
       message.innerHTML = 'Do formularu si napisal uplnu blbost!'
     }
