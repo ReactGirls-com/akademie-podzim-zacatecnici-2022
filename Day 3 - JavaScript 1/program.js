@@ -5,6 +5,7 @@
 // --------------------------------------------------
 
 // // Načtení čísla od uživatele
+// // Načtení čísla od uživatele
 // let hodina = Number(prompt("Zadej, kolik je hodin:"));
 // if (hodina < 9) {
 // 	console.log("Je ráno.");
