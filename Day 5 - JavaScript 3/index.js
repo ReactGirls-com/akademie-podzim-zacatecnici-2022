@@ -13,19 +13,20 @@ window.addEventListener('load', function () {
 
   let submitButton = document.querySelector('#submit-button')
   let numberInput = document.querySelector('#number-input')
+  let message = document.querySelector('#message')
 
   submitButton.addEventListener('click', function () {
     let guessedNumber = Number(numberInput.value)
 
 
     if (guessedNumber < randomNumber) {
-      console.log('Myslím si větší číslo.')
+      message.innerHTML = 'Myslím si větší číslo.'
     } else if (guessedNumber > randomNumber) {
-      console.log('Myslím si menší číslo.')
+      message.innerHTML = 'Myslím si menší číslo.'
     } else if (guessedNumber === randomNumber) {
-      console.log('Gratulujem!')
+      message.innerHTML = 'Gratulujem!'
     } else {
-      console.log('Do formularu si napisal uplnu blbost!')
+      message.innerHTML = 'Do formularu si napisal uplnu blbost!'
     }
 
   })
