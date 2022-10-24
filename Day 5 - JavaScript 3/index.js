@@ -7,7 +7,7 @@ function nahodneCislo(minimum, maximum) {
 
 
 window.addEventListener('load', function () {
-  let maximalniPocetPokusu = 10
+  const maximalniPocetPokusu = 10
 
   let randomNumber = nahodneCislo(0, 100)
   console.log(randomNumber)
