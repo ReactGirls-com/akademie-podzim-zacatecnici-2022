@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Počítač hádá číslo</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="game.js"></script>
+</head>
+
+<!-- body has the following classes expressing the game status: before-game, during-game, and after-game -->
+<body class="before-game">
+	<h1>Mysli si číslo od <span class="minimum"></span> do <span class="maximum"></span></h1>
+	<section>
+		<button class="start-game">Už si myslím</button>
+		<button class="play-again">Nová hra</button>
+	</section>
+	<section class="current-guess-section">
+		<p>Můj tip: <span class="current-guess"></span></p>
+	</section>
+	<section class="gameplay-section">
+		<button class="guess-higher">Zkus větší</button>
+		<button class="bingo">Trefa!</button>
+		<button class="guess-lower">Zkus menší</button>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.before-game .play-again {
+	display: none;
+}
+.before-game .current-guess-section {
+	display: none;
+}
+.before-game .gameplay-section {
+	display: none;
+}
+
+.during-game .start-game {
+	display: none;
+}
+
+.after-game .start-game {
+	display: none;
+}
+.after-game .gameplay-section {
+	display: none;
+}
